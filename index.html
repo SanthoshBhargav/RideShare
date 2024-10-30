@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Share</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5230ff07db.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body id="body">
+    <nav>
+        <h1 class="h1">RideShare</h1>
+        <ul>
+            <li>Home</li>
+            <li onclick="filterDisplay()" class="filter-li"><i class="fa-solid fa-filter"></i></li>  
+        </ul>
+    </nav>
+    <div id="filterBox" class="filter-main d-none">
+        <div class="filterBox">
+            <label class="lable inp1" for="destination" >Destination</label>
+            <input class="inp inp1" type="text" id="destination" placeholder="Destination" required/>
+            <label class="label inp1" for="date">Date</label>
+            <input class="inp inp1" type="date" id="date" required/>
+            <div>
+                <button class="but2" onclick="filterFunction()">Filter</button>
+                <button class="but2" onclick="filterDisplay()">Close</button>
+            </div>
+        </div>
+        
+    </div>
+    <button onclick="popUp()" id="but" class="but">Add a Ride</button>
+    <div class="main-body" id="main-body">
+        
+        <div class="cards-list" id="cards-list">
+            <h2 class="h3">Hello User! Looking for a Budget friendly Cab service. Here's the way..... </h2>
+        </div>
+        <div class="img-div"><img src="cab.webp" class="img1"/></div>
+    </div>
+    <div id="pop-up-card" class="d-none pop-up-card">
+        <h1>Add a Ride</h1>
+        <label class="lable" for="Name">Name</label>
+        <input class="inp" type="text" id="Name" placeholder="Your Name" required/>
+        <label class="lable" for="Destination" >Destination</label>
+        <input class="inp" type="text" id="Destination" placeholder="Destination" required/>
+        <label class="lable" for="Hostel" >Hostel</label>
+        <input class="inp" type="text" id="Hostel" placeholder="Your Hostel" required/>
+        <label class="label" for="Date">Date</label>
+        <input class="inp" type="date" id="Date" required/>
+        <label class="label" for="Time" >Time</label>
+        <input class="inp" type="time" id="Time" required/>
+        <label class="label" for="Mn">Mobile Number</label>
+        <input class="inp" type="number" id="Mn" placeholder="Your Phone Number" required/>
+        <br/>
+        <button class="but1" onclick="addRequest()">Post</button>
+    </div>
+</body>
+<script src="js.js"></script>
+
+</html>
